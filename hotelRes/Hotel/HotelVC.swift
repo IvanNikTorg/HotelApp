@@ -11,12 +11,11 @@ class HotelVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let label = UILabel()
-//        label.text = "Hotel"
-//        label.center = CGPoint(x: 100, y: 100)
-//        label.textColor = .white
-//        view.addSubview(label)
+        view.backgroundColor = .blue
+        let label = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        label.text = "Hotel"
+        label.textColor = .white
+        view.addSubview(label)
     }
 
 
