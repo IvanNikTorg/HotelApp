@@ -14,20 +14,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
-           let viewCon = HotelVC()
-//           let presenter = CharacterListPresenter()
-//           viewCon.presenter = presenter
-//           presenter.output = viewCon
 
-           navController = UINavigationController(rootViewController: viewCon)
-           navController.navigationBar.barStyle = .black
-           navController.navigationBar.tintColor = .white
-           let window = UIWindow(windowScene: windowsScene)
+        let viewCon = HotelVC()
+        let presenter = HotelVCPresenter()
+        viewCon.presenter = presenter
+        presenter.output = viewCon
 
-           window.rootViewController = navController
-           window.makeKeyAndVisible()
+        navController = UINavigationController(rootViewController: viewCon)
+     //   navController.navigationBar.barStyle = .black
+     //   navController.navigationBar.tintColor = .white
+        let window = UIWindow(windowScene: windowsScene)
 
-           self.window = window
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
+
+        self.window = window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
