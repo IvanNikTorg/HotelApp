@@ -102,7 +102,7 @@ final class DetailHotelCell: UITableViewCell {
             peculiarView.rightAnchor.constraint(equalTo: backCellView.rightAnchor, constant: -16),
         ])
 
-        peculiarView.axis = .horizontal
+        peculiarView.axis = .vertical
 
         descriptLabel.translatesAutoresizingMaskIntoConstraints = false
 

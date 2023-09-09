@@ -23,6 +23,12 @@
 		CED4EA962AA91BBB00D5A00C /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EA952AA91BBA00D5A00C /* RoomVC.swift */; };
 		CED4EA982AA91D5D00D5A00C /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EA972AA91D5D00D5A00C /* RoomCell.swift */; };
 		CED4EA9A2AA91D8C00D5A00C /* RoomVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EA992AA91D8C00D5A00C /* RoomVCPresenter.swift */; };
+		CED4EA9D2AAB1F9D00D5A00C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EA9C2AAB1F9D00D5A00C /* ButtonView.swift */; };
+		CED4EA9F2AAB1FAC00D5A00C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EA9E2AAB1FAC00D5A00C /* AboutView.swift */; };
+		CED4EAA22AAB336600D5A00C /* ReserveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA12AAB336600D5A00C /* ReserveVC.swift */; };
+		CED4EAA42AAB392A00D5A00C /* ReserveVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA32AAB392A00D5A00C /* ReserveVCPresenter.swift */; };
+		CED4EAA62AAB8BD400D5A00C /* OfferInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA52AAB8BD400D5A00C /* OfferInfoCell.swift */; };
+		CED4EAA82AAB957A00D5A00C /* BuyerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA72AAB957A00D5A00C /* BuyerInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		CED4EA952AA91BBA00D5A00C /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		CED4EA972AA91D5D00D5A00C /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		CED4EA992AA91D8C00D5A00C /* RoomVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVCPresenter.swift; sourceTree = "<group>"; };
+		CED4EA9C2AAB1F9D00D5A00C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		CED4EA9E2AAB1FAC00D5A00C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		CED4EAA12AAB336600D5A00C /* ReserveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveVC.swift; sourceTree = "<group>"; };
+		CED4EAA32AAB392A00D5A00C /* ReserveVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveVCPresenter.swift; sourceTree = "<group>"; };
+		CED4EAA52AAB8BD400D5A00C /* OfferInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInfoCell.swift; sourceTree = "<group>"; };
+		CED4EAA72AAB957A00D5A00C /* BuyerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +88,11 @@
 		CED4EA6B2AA60BF500D5A00C /* hotelRes */ = {
 			isa = PBXGroup;
 			children = (
-				CED4EA942AA9197B00D5A00C /* Room */,
 				CED4EA872AA7042C00D5A00C /* Services */,
+				CED4EA9B2AAB1F6300D5A00C /* Components */,
 				CED4EA802AA6FD7B00D5A00C /* Hotel */,
+				CED4EA942AA9197B00D5A00C /* Room */,
+				CED4EAA02AAB32F100D5A00C /* Reserve */,
 				CED4EA6C2AA60BF500D5A00C /* AppDelegate.swift */,
 				CED4EA6E2AA60BF500D5A00C /* SceneDelegate.swift */,
 				CED4EA752AA60BF800D5A00C /* Assets.xcassets */,
@@ -96,8 +110,6 @@
 				CED4EA832AA6FEF000D5A00C /* DataHotelCell.swift */,
 				CED4EA812AA6FEAC00D5A00C /* DetailHotelCell.swift */,
 				CED4EA852AA6FF2F00D5A00C /* ButtonCell.swift */,
-				CED4EA902AA87FC300D5A00C /* PeculiaritiesView.swift */,
-				CED4EA922AA8801400D5A00C /* SettingsView.swift */,
 			);
 			path = Hotel;
 			sourceTree = "<group>";
@@ -119,6 +131,28 @@
 				CED4EA972AA91D5D00D5A00C /* RoomCell.swift */,
 			);
 			path = Room;
+			sourceTree = "<group>";
+		};
+		CED4EA9B2AAB1F6300D5A00C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CED4EA922AA8801400D5A00C /* SettingsView.swift */,
+				CED4EA902AA87FC300D5A00C /* PeculiaritiesView.swift */,
+				CED4EA9C2AAB1F9D00D5A00C /* ButtonView.swift */,
+				CED4EA9E2AAB1FAC00D5A00C /* AboutView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CED4EAA02AAB32F100D5A00C /* Reserve */ = {
+			isa = PBXGroup;
+			children = (
+				CED4EAA12AAB336600D5A00C /* ReserveVC.swift */,
+				CED4EAA32AAB392A00D5A00C /* ReserveVCPresenter.swift */,
+				CED4EAA52AAB8BD400D5A00C /* OfferInfoCell.swift */,
+				CED4EAA72AAB957A00D5A00C /* BuyerInfoCell.swift */,
+			);
+			path = Reserve;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,18 +225,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED4EA9F2AAB1FAC00D5A00C /* AboutView.swift in Sources */,
 				CED4EA712AA60BF500D5A00C /* HotelVC.swift in Sources */,
 				CED4EA982AA91D5D00D5A00C /* RoomCell.swift in Sources */,
+				CED4EA9D2AAB1F9D00D5A00C /* ButtonView.swift in Sources */,
 				CED4EA962AA91BBB00D5A00C /* RoomVC.swift in Sources */,
 				CED4EA8B2AA7085700D5A00C /* DownloadImage.swift in Sources */,
+				CED4EAA62AAB8BD400D5A00C /* OfferInfoCell.swift in Sources */,
 				CED4EA6D2AA60BF500D5A00C /* AppDelegate.swift in Sources */,
 				CED4EA842AA6FEF000D5A00C /* DataHotelCell.swift in Sources */,
 				CED4EA9A2AA91D8C00D5A00C /* RoomVCPresenter.swift in Sources */,
 				CED4EA6F2AA60BF500D5A00C /* SceneDelegate.swift in Sources */,
+				CED4EAA42AAB392A00D5A00C /* ReserveVCPresenter.swift in Sources */,
 				CED4EA892AA7044C00D5A00C /* NetworkServices.swift in Sources */,
+				CED4EAA22AAB336600D5A00C /* ReserveVC.swift in Sources */,
 				CED4EA8D2AA714CE00D5A00C /* HotelVCPresenter.swift in Sources */,
 				CED4EA822AA6FEAC00D5A00C /* DetailHotelCell.swift in Sources */,
 				CED4EA912AA87FC300D5A00C /* PeculiaritiesView.swift in Sources */,
+				CED4EAA82AAB957A00D5A00C /* BuyerInfoCell.swift in Sources */,
 				CED4EA862AA6FF2F00D5A00C /* ButtonCell.swift in Sources */,
 				CED4EA932AA8801400D5A00C /* SettingsView.swift in Sources */,
 			);

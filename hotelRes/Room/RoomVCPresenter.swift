@@ -5,13 +5,15 @@
 //  Created by user on 06.09.2023.
 //
 
-protocol RoomVCPresenterProtocol: AnyObject {
+protocol RoomVCPresenterProtocol: AnyObject {    
     func getData()
+    func openReservedScreen()
 }
 
 final class RoomVCPresenter: RoomVCPresenterProtocol {
 
     weak var output: RoomVCPresenterOutput?
+    
     private var dataRoomSource = [RoomCell.HotelRoom]()
 
     func getData() {
@@ -19,9 +21,14 @@ final class RoomVCPresenter: RoomVCPresenterProtocol {
             guard let self = self else { return }
             if resData?.rooms != nil, let rooms = resData?.rooms {
                 self.dataRoomSource = rooms.map {
-                    RoomCell.HotelRoom(id: $0.id, name: $0.name, price: $0.price,
-                                       price_per: $0.price_per, peculiarities: $0.peculiarities,
-                                       image_urls: $0.image_urls)
+                    let hundred: Int = ($0.price ?? 0) % 1000
+                    let fousend: Int = ($0.price ?? 0) / 1000
+                    return RoomCell.HotelRoom(id: $0.id,
+                                              name: $0.name,
+                                              price: ((String(fousend)) + " " + (String(hundred)) + " ₽"),
+                                              price_per: $0.price_per,
+                                              peculiarities: $0.peculiarities,
+                                              image_urls: $0.image_urls)
                 }
                 self.output?.updateRoomSection(with: self.dataRoomSource)
             }
@@ -38,7 +45,16 @@ final class RoomVCPresenter: RoomVCPresenterProtocol {
                                   peculiarities: dataRoomSource[index].peculiarities,
                                   image_urls: dataRoomSource[index].image_urls)
     }
-    
+
+    func openReservedScreen() {
+        let vc = ReserveVC()
+        let presenter = ReserveVCPresenter()
+        presenter.output = vc
+        vc.presenter = presenter
+        vc.navigationItem.title = "Бронирование"
+        output?.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }
 
 

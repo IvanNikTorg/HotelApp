@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol RoomVCPresenterOutput: AnyObject {
-    
+protocol RoomVCPresenterOutput: UIViewController {
     func updateRoomSection(with model: [RoomCell.HotelRoom])
 }
 
@@ -16,7 +15,7 @@ final class RoomVC: UIViewController, UITableViewDelegate {
 
     var presenter: RoomVCPresenter?
 
-    private let hotelTableView = UITableView(frame: .zero, style: .plain)
+    private let roomTableView = UITableView(frame: .zero, style: .plain)
 
     var dataRoomSource: [RoomCell.HotelRoom]?
 
@@ -25,26 +24,25 @@ final class RoomVC: UIViewController, UITableViewDelegate {
         view.backgroundColor = .white
         setupView()
         presenter?.getData()
-        navigationItem.title = "Steigenberger Makadi"
-
+        
     }
 
     private func setupView() {
-        view.addSubview(hotelTableView)
-        hotelTableView.allowsSelection = false
-        hotelTableView.separatorStyle = .none
-        hotelTableView.delegate = self
-        hotelTableView.dataSource = self
-        hotelTableView.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.976, alpha: 1)
-        hotelTableView.register(RoomCell.self, forCellReuseIdentifier: "RoomCell")
+        view.addSubview(roomTableView)
+        roomTableView.allowsSelection = false
+        roomTableView.separatorStyle = .none
+        roomTableView.delegate = self
+        roomTableView.dataSource = self
+        roomTableView.backgroundColor = UIColor(red: 0.965, green: 0.965, blue: 0.976, alpha: 1)
+        roomTableView.register(RoomCell.self, forCellReuseIdentifier: "RoomCell")
 
-        hotelTableView.translatesAutoresizingMaskIntoConstraints = false
+        roomTableView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            hotelTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            hotelTableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            hotelTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            hotelTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            roomTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            roomTableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            roomTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            roomTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
@@ -59,6 +57,8 @@ extension RoomVC: UITableViewDataSource {
                                                                for: indexPath) as? RoomCell
         else { return UITableViewCell() }
         dataRoomCell.fillCell(model: dataRoomSource?[indexPath.row])
+        dataRoomCell.delegate = self
+
         return dataRoomCell
 
     }
@@ -69,14 +69,20 @@ extension RoomVC: UITableViewDataSource {
 }
 
 extension RoomVC: RoomVCPresenterOutput {
-    
+
     func updateRoomSection(with model: [RoomCell.HotelRoom]) {
         dataRoomSource = model
         DispatchQueue.main.async {
-            self.hotelTableView.reloadData()
+            self.roomTableView.reloadData()
         }
     }
     
+}
+
+extension RoomVC: ButtonRoomDelegate {
+    func didTouchRoomButton() {
+        presenter?.openReservedScreen()
+    }
 }
 
 

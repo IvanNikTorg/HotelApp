@@ -54,12 +54,13 @@ final class HotelVCPresenter: HotelVCPresenterProtocol {
     }
 
     func openRoomScreen() {
-        let VC = RoomVC()
+        let vc = RoomVC()
         let presenter = RoomVCPresenter()
-        presenter.output = VC
-        VC.presenter = presenter
+        presenter.output = vc
+        vc.presenter = presenter
 
-        output?.navigationController?.pushViewController(VC, animated: true)
+        vc.navigationItem.title = dataHotelSource.nameHotel
+        output?.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

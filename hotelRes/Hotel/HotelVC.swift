@@ -12,6 +12,16 @@ protocol HotelVCPresenterOutput: UIViewController {
     func updateDetailSection(with model: DetailHotelCell.Model)
 }
 
+class MyTableViewController: UITableViewController {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        stopToFinish()
+    }
+
+    func stopToFinish() {
+
+    }
+}
+
 final class HotelVC: UIViewController {
 
     var presenter: HotelVCPresenter?
@@ -61,6 +71,8 @@ extension HotelVC: UITableViewDelegate {
             headerView.textLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
             headerView.textLabel?.textColor = .white
         }
+
+
     }
 }
 
@@ -125,13 +137,6 @@ extension HotelVC: ButtonCellDelegate {
     }
 }
 
-extension UIApplication {
-    var statusBarView: UIView? {
-        if responds(to: Selector(("statusBar"))) {
-            return value(forKey: "statusBar") as? UIView
-        }
-        return nil
-    }
-}
+
 
 

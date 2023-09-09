@@ -18,15 +18,18 @@ final class DataHotelCell: UITableViewCell {
         var priceForIt: String?
     }
 
-    private let nameLabel = UILabel()
     private let avatarImage = UIImageView()
+
+    private let nameLabel = UILabel()
     private let ratingLabel = UILabel()
     private let adressLabel = UILabel()
+    private let starIcon = UIImageView(image: UIImage(named: "Star"))
+    private let viewForRating = UIView()
+
     private let minPriceLabel = UILabel()
     private let priceForItLabel = UILabel()
-    private let viewForRating = UIView()
     private let viewForBackCell = UIView()
-    private let starIcon = UIImageView(image: UIImage(named: "Star"))
+
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: "DataHotelCell")

@@ -13,9 +13,7 @@ protocol ButtonCellDelegate: AnyObject {
 
 final class ButtonCell: UITableViewCell {
 
-    private let buyButton = UIButton()
-    private let textButton = UILabel()
-
+    private let buyButtonApp = ButtonView()
     weak var delegate: ButtonCellDelegate?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -33,35 +31,23 @@ final class ButtonCell: UITableViewCell {
 
     private func configCell() {
         contentView.backgroundColor = .white
+        contentView.addSubview(buyButtonApp)
+        buyButtonApp.addTarget(self, action: #selector(touchButton(parametrSender: )), for: .touchUpInside)
 
-        contentView.addSubview(buyButton)
-        contentView.addSubview(textButton)
-
-        buyButton.addTarget(self, action: #selector(touchButton(parametrSender: )), for: .touchUpInside)
-
-        buyButton.translatesAutoresizingMaskIntoConstraints = false
-        buyButton.backgroundColor = UIColor(red: 13/255, green: 114/255, blue: 255/255, alpha: 1)
-        buyButton.layer.cornerRadius = 15
-
-        NSLayoutConstraint.activate([
-            buyButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
-            buyButton.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
-            buyButton.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
-            buyButton.heightAnchor.constraint(equalToConstant: 48),
-            buyButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -15)
-        ])
-
-        textButton.text = "К выбору номера"
-        textButton.font = .systemFont(ofSize: 16, weight: .medium)
-        textButton.textColor = .white
-
-        textButton.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            textButton.centerYAnchor.constraint(equalTo: buyButton.centerYAnchor),
-            textButton.centerXAnchor.constraint(equalTo: buyButton.centerXAnchor)
-        ])
+        buyButtonApp.translatesAutoresizingMaskIntoConstraints = false
+        buyButtonApp.backgroundColor = UIColor(red: 13/255, green: 114/255, blue: 255/255, alpha: 1)
+        buyButtonApp.layer.cornerRadius = 15
         
+        NSLayoutConstraint.activate([
+            buyButtonApp.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
+            buyButtonApp.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+            buyButtonApp.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
+            buyButtonApp.heightAnchor.constraint(equalToConstant: 48),
+            buyButtonApp.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -100)
+        ])
+
+        buyButtonApp.fill(title: "К выбору номера")
+
     }
-    
+
 }
