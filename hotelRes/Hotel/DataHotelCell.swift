@@ -44,6 +44,7 @@ final class DataHotelCell: UITableViewCell {
         minPriceLabel.text = model?.minPrice ?? "None"
         priceForItLabel.text = model?.priceForIt ?? "None"
         corouselView.fillCell(model: model?.avatarImage ?? [])
+        pageControl.numberOfPages = model?.avatarImage?.count ?? 0
     }
     
     private func configCell() {
@@ -69,6 +70,7 @@ final class DataHotelCell: UITableViewCell {
         viewForBackCell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         viewForBackCell.backgroundColor = .white
 
+        corouselView.corouselViewDelegate = self
         corouselView.translatesAutoresizingMaskIntoConstraints = false
 
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -115,5 +117,11 @@ final class DataHotelCell: UITableViewCell {
         priceForItLabel.textColor = UIColor(red: 0.51, green: 0.53, blue: 0.59, alpha: 1)
         priceForItLabel.font = .systemFont(ofSize: 16, weight: .regular)
 
+    }
+}
+
+extension DataHotelCell: CorouselViewDelegate {
+    func updateSelectedIndex(index: Int) {
+        pageControl.currentPage = index
     }
 }

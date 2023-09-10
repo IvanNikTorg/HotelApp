@@ -8,7 +8,13 @@
 import UIKit
 
 final class CorouselPageControl: UIPageControl {
-    
+//
+//    public var currentIndex = 0 {
+//        didSet {
+//            currentPage = currentIndex
+//        }
+//    }
+
     init() {
 
         super.init(frame: .zero)
@@ -20,7 +26,6 @@ final class CorouselPageControl: UIPageControl {
     }
 
     func config() {
-        numberOfPages = 5
 
         pageIndicatorTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.22)
         currentPageIndicatorTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)

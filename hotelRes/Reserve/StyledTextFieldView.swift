@@ -38,6 +38,14 @@ final class StyledTextFieldView: UIView {
     func configure(type: StyledTextFieldView.TextFieldType, placeholder: String) {
         headerTitleLabel.text = placeholder
         self.type = type
+        switch type {
+        case .phone:
+            textField.keyboardType = .phonePad
+        case .email:
+            textField.keyboardType = .emailAddress
+        default:
+            textField.keyboardType = .default
+        }
     }
 
     func isValid() -> Bool {
@@ -112,7 +120,38 @@ final class StyledTextFieldView: UIView {
         override func resignFirstResponder() -> Bool {
             return textField.resignFirstResponder()
         }
+
+    func format(with mask: String, phone: String) -> String {
+        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        var result = ""
+        var index = numbers.startIndex // numbers iterator
+
+        for ch in mask where index < numbers.endIndex {
+            if ch == "*" {
+
+                result.append(numbers[index])
+
+                // move numbers iterator to the next index
+                index = numbers.index(after: index)
+
+            } else {
+                result.append(ch) // just append a mask character
+            }
+        }
+        return result
+    }
+
+//    func format(with mask: String, phone: String) -> String {
+//
+//        var char =
+//        var result = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+//        var index = result.endIndex // numbers iterator
+//
+//    }
+
 }
+
+
 
 
 extension StyledTextFieldView: UITextFieldDelegate {
@@ -133,11 +172,26 @@ extension StyledTextFieldView: UITextFieldDelegate {
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-        return true
+        guard self.type == .phone else { return true }
+        guard let text = textField.text else { return false }
+            let newString = (text as NSString).replacingCharacters(in: range, with: string)
+            textField.text = format(with: "+* (***) ***-**-**", phone: newString)
+            return false
     }
 
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        guard self.type == .phone else { return true }
+//
+//        guard let text = textField.text else { return false }
+//            let newString = (text as NSString).replacingCharacters(in: range, with: string)
+//
+//            textField.text = format(with: "+7 (***) *******", phone: newString)
+//            return false
+//    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        _ = self.resignFirstResponder()
         return true
+
     }
 }

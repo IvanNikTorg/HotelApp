@@ -7,7 +7,20 @@
 
 import UIKit
 
-final class CorouselView: UICollectionView, UIPageViewControllerDelegate {
+//protocol PageControlDelegate {
+//    func setPage(number: Int)
+//}
+
+protocol CorouselViewDelegate: AnyObject {
+    func updateSelectedIndex(index: Int)
+}
+
+final class CorouselView: UICollectionView {
+//
+//    func setPage(number: Int) {
+//
+//    }
+
 
     struct Constants {
         static let leftC : CGFloat = 0
@@ -15,6 +28,7 @@ final class CorouselView: UICollectionView, UIPageViewControllerDelegate {
         static let corouselMinLineSpacing : CGFloat = 5
     }
 
+    weak var corouselViewDelegate: CorouselViewDelegate?
     
     private var strArray = [String]()
 
@@ -36,6 +50,11 @@ final class CorouselView: UICollectionView, UIPageViewControllerDelegate {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
     }
 
     func config() {
@@ -60,7 +79,9 @@ final class CorouselView: UICollectionView, UIPageViewControllerDelegate {
 }
 
 extension CorouselView: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        corouselViewDelegate?.updateSelectedIndex(index: indexPath.row)
+    }
 }
 
 

@@ -13,8 +13,12 @@ protocol HotelVCPresenterOutput: UIViewController {
 }
 
 class MyTableViewController: UITableViewController {
+
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         stopToFinish()
+    }
+
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
     }
 
     func stopToFinish() {

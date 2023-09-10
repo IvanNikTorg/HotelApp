@@ -73,6 +73,8 @@ final class BuyerInfoCell: UITableViewCell {
             telTextField.heightAnchor.constraint(equalToConstant: 52)
         ])
 
+       // telTextField.text = "+7 (***) ***-**-**"
+
         emailTextField.configure(type: .email, placeholder: "Почта")
         backView.addSubview(emailTextField)
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
