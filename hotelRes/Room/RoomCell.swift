@@ -186,7 +186,7 @@ final class RoomCell: UITableViewCell {
 
         contentView.addSubview(buyButtonApp)
 
-        buyButtonApp.addTarget(self, action: #selector(touchButton(parametrSender: )), for: .touchUpInside)
+        buyButtonApp.addTarget(self, action: #selector(touchButton), for: .touchUpInside)
 
         buyButtonApp.translatesAutoresizingMaskIntoConstraints = false
         buyButtonApp.backgroundColor = UIColor(red: 13/255, green: 114/255, blue: 255/255, alpha: 1)
@@ -204,7 +204,7 @@ final class RoomCell: UITableViewCell {
 
     }
 
-    @objc private func touchButton(parametrSender: Any) {
+    @objc private func touchButton() {
         delegate?.didTouchRoomButton()
     }
 

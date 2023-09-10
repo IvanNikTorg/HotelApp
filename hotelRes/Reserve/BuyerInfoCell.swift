@@ -15,8 +15,8 @@ final class BuyerInfoCell: UITableViewCell {
 
     private let backView = UIView()
     private let titleLabel = UILabel()
-    private let telTextField = UITextField() // todo add custom
-    private let emailTextField = UITextField() // todo add custom
+    private let telTextField = StyledTextFieldView()
+    private let emailTextField = StyledTextFieldView()
     private let descriptionLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -30,11 +30,11 @@ final class BuyerInfoCell: UITableViewCell {
 
     public func fillCell(model: BuyerInfoCell.Model?) {
         //todo
-        telTextField.backgroundColor = .red
-        emailTextField.backgroundColor = .green
+       
     }
 
     private func configCell() {
+        self.backgroundColor = .clear
         backView.backgroundColor = .white
         backView.layer.cornerRadius = 12
 
@@ -62,6 +62,7 @@ final class BuyerInfoCell: UITableViewCell {
             titleLabel.rightAnchor.constraint(equalTo: backView.rightAnchor, constant: -16)
         ])
 
+        telTextField.configure(type: .phone, placeholder: "Номер телефона")
         backView.addSubview(telTextField)
         telTextField.translatesAutoresizingMaskIntoConstraints = false
 
@@ -72,6 +73,7 @@ final class BuyerInfoCell: UITableViewCell {
             telTextField.heightAnchor.constraint(equalToConstant: 52)
         ])
 
+        emailTextField.configure(type: .email, placeholder: "Почта")
         backView.addSubview(emailTextField)
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
 

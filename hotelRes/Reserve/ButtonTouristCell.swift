@@ -1,23 +1,24 @@
 //
-//  ButtonCell.swift
+//  ButtonTouristCell.swift
 //  hotelRes
 //
-//  Created by user on 05.09.2023.
+//  Created by user on 10.09.2023.
 //
 
 import UIKit
 
-protocol ButtonCellDelegate: AnyObject {
+protocol ButtonTouristCellDelegate: AnyObject {
     func didTapButton()
 }
 
-final class ButtonCell: UITableViewCell {
+final class ButtonTouristCell: UITableViewCell {
 
     private let buyButtonApp = ButtonView()
-    weak var delegate: ButtonCellDelegate?
+    
+    weak var delegate: ButtonTouristCellDelegate?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: "ButtonCell")
+        super.init(style: .default, reuseIdentifier: "ButtonTouristCell")
         configCell()
     }
 
@@ -48,7 +49,7 @@ final class ButtonCell: UITableViewCell {
 
         ])
 
-        buyButtonApp.fill(title: "К выбору номера")
+        buyButtonApp.fill(title: "Оплатить")
 
     }
 

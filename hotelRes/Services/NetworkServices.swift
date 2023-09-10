@@ -17,7 +17,7 @@ struct HotelData: Codable {
     let rating_name: String?
     let image_urls: [String]?
     let about_the_hotel: AboutHotel
-      }
+}
 
 struct AboutHotel: Codable {
     let description: String?
@@ -35,6 +35,24 @@ struct HotelRoom: Codable {
     let price_per: String?
     let peculiarities: [String]?
     let image_urls: [String]?
+}
+
+struct ReserveData: Codable {
+    let id: Int?
+    let hotel_name: String?
+    let hotel_adress: String?
+    let horating: Int?
+    let rating_name: String?
+    let departure: String?
+    let arrival_country: String?
+    let tour_date_start: String?
+    let tour_date_stop: String?
+    let number_of_nights: Int?
+    let room: String?
+    let nutrition: String?
+    let tour_price: Int?
+    let fuel_charge: Int?
+    let service_charge: Int?
 }
 
 
@@ -88,24 +106,24 @@ class NetworkService {
         }.resume()
     }
 
-//    func getDataReserve(completion: @escaping (RoomData?) -> () ) {
-//        guard let url = URL(string: roomUrl) else {
-//            completion(nil)
-//            return
-//        }
-//
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            guard let data = data, error == nil else {
-//                completion(nil)
-//                return
-//            }
-//            do {
-//                let urlList = try JSONDecoder().decode(RoomData.self, from: data)
-//                completion(urlList)
-//            } catch let error {
-//                print(error)
-//            }
-//        }.resume()
-//    }
+    func getDataReserve(completion: @escaping (ReserveData?) -> () ) {
+        guard let url = URL(string: reserveUrl) else {
+            completion(nil)
+            return
+        }
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+            do {
+                let urlList = try JSONDecoder().decode(ReserveData.self, from: data)
+                completion(urlList)
+            } catch let error {
+                print(error)
+            }
+        }.resume()
+    }
 
 }

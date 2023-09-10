@@ -21,7 +21,7 @@ final class DetailHotelCell: UITableViewCell {
     private let backCellView = UIView()
     private let settingStackView = UIStackView()
     private let settingBackView = UIView()
- //   private var pecArrayView = [PeculiaritiesView]()
+ //   private var pecArrayView = [PeculiaritiesView]() //todo
 
     let setInfoComf = SettingsView()
     let setInfoInc = SettingsView()
@@ -42,7 +42,7 @@ final class DetailHotelCell: UITableViewCell {
             view.fill(title: str)
             peculiarView.addArrangedSubview(view)
 
-//            pecArrayView.append(view)
+//            pecArrayView.append(view)    //to do Colbasky
 
 //            peculiarView.addSubview(view)
 //            view.translatesAutoresizingMaskIntoConstraints = false

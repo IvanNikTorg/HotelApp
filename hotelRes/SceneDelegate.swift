@@ -20,8 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         viewCon.presenter = presenter
         presenter.output = viewCon
 
-
-
         navController = UINavigationController(rootViewController: viewCon)
      //   navController.navigationBar.barStyle = .black
      //   navController.navigationBar.tintColor = .white

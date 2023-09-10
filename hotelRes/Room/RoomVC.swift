@@ -28,6 +28,8 @@ final class RoomVC: UIViewController, UITableViewDelegate {
     }
 
     private func setupView() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .black
         view.addSubview(roomTableView)
         roomTableView.allowsSelection = false
         roomTableView.separatorStyle = .none

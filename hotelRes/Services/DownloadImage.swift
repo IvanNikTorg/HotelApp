@@ -19,4 +19,18 @@ extension UIImageView {
             }
         }
     }
+
+//    func loadAndGet(url: URL,complition: @escaping (UIImage) -> ()) {
+//        DispatchQueue.global().async {
+//            if let data = try? Data(contentsOf: url) {
+//                if let image = UIImage(data: data) {
+//                    DispatchQueue.main.async {
+//                    complition(image)
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
+
+

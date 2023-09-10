@@ -45,8 +45,8 @@ final class AboutView: UIView {
 
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: ratingLabel.bottomAnchor, constant: 13),
-            nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-            nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16)
+            nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
+            nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])
 
         nameLabel.textColor = .black
@@ -56,8 +56,8 @@ final class AboutView: UIView {
         viewForRating.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            viewForRating.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
-            viewForRating.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
+            viewForRating.topAnchor.constraint(equalTo: self.topAnchor),
+            viewForRating.leftAnchor.constraint(equalTo: self.leftAnchor),
             viewForRating.rightAnchor.constraint(equalTo: ratingLabel.rightAnchor, constant: 10),
             viewForRating.bottomAnchor.constraint(equalTo: ratingLabel.bottomAnchor,constant: 5)
 
@@ -77,7 +77,7 @@ final class AboutView: UIView {
         ratingLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            ratingLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 21),
+            ratingLabel.topAnchor.constraint(equalTo: viewForRating.topAnchor, constant: 5),
             ratingLabel.leftAnchor.constraint(equalTo: starIcon.rightAnchor, constant: 2)
         ])
 
@@ -88,8 +88,9 @@ final class AboutView: UIView {
 
         NSLayoutConstraint.activate([
             adressLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
-            adressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-            adressLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16)
+            adressLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
+            adressLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
+            adressLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
 
         adressLabel.textColor = UIColor(red: 0.05, green: 0.45, blue: 1, alpha: 1)

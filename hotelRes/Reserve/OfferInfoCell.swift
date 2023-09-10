@@ -10,13 +10,25 @@ import UIKit
 final class OfferInfoCell: UITableViewCell {
 
     struct Model {
-
+        var name: String?
+        var departure: String?
+        var arrival_country: String?
+        var tour_date: String?
+        var number_of_nights: Int?
+        var room: String?
+        var nutrition: String?
     }
 
     private let backView = UIView()
     private let stackView = UIStackView()
-    private let startCityRow = OfferInfoRow()
-    private let startCountryRow = OfferInfoRow()
+
+    private let nameLabel = OfferInfoRow()
+    private let depLabel = OfferInfoRow()
+    private let arrivalLabel = OfferInfoRow()
+    private let dateLabel = OfferInfoRow()
+    private let numLabel = OfferInfoRow()
+    private let roomLabel = OfferInfoRow()
+    private let forWhatLabel = OfferInfoRow()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: "OfferInfoCell")
@@ -28,13 +40,32 @@ final class OfferInfoCell: UITableViewCell {
     }
 
     public func fillCell(model: OfferInfoCell.Model?) {
-        stackView.addArrangedSubview(startCityRow)
-        startCityRow.fill(title: "Вылет из", value: "Санкт-Петербург")
-        stackView.addArrangedSubview(startCountryRow)
-        startCountryRow.fill(title: "Номер", value: "Стандартный с видом на бассейн или сад")
+
+        depLabel.fill(title: "Вылет из", value: model?.departure ?? "None")
+        stackView.addArrangedSubview(depLabel)
+
+        arrivalLabel.fill(title: "Страна, город", value: model?.arrival_country ?? "None")
+        stackView.addArrangedSubview(arrivalLabel)
+
+        dateLabel.fill(title: "Даты", value: model?.tour_date ?? "None")
+        stackView.addArrangedSubview(dateLabel)
+
+        numLabel.fill(title: "Кол-во ночей", value: String(model?.number_of_nights ?? 0))
+        stackView.addArrangedSubview(numLabel)
+
+        nameLabel.fill(title: "Отель", value: model?.name ?? "None")
+        stackView.addArrangedSubview(nameLabel)
+
+        roomLabel.fill(title: "Номер", value: model?.room ?? "None")
+        stackView.addArrangedSubview(roomLabel)
+
+        forWhatLabel.fill(title: "Питание", value: model?.nutrition ?? "None")
+        stackView.addArrangedSubview(forWhatLabel)
+
     }
 
     private func configCell() {
+        self.backgroundColor = .clear
         backView.backgroundColor = .white
         backView.layer.cornerRadius = 12
 

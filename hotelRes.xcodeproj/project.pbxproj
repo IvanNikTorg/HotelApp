@@ -29,6 +29,17 @@
 		CED4EAA42AAB392A00D5A00C /* ReserveVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA32AAB392A00D5A00C /* ReserveVCPresenter.swift */; };
 		CED4EAA62AAB8BD400D5A00C /* OfferInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA52AAB8BD400D5A00C /* OfferInfoCell.swift */; };
 		CED4EAA82AAB957A00D5A00C /* BuyerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA72AAB957A00D5A00C /* BuyerInfoCell.swift */; };
+		CED4EAAA2AAC759E00D5A00C /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAA92AAC759E00D5A00C /* AboutCell.swift */; };
+		CED4EAAC2AACBE1400D5A00C /* TotalPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAAB2AACBE1400D5A00C /* TotalPriceCell.swift */; };
+		CED4EAAE2AACC69300D5A00C /* StyledTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAAD2AACC69300D5A00C /* StyledTextFieldView.swift */; };
+		CED4EAB02AACDE2700D5A00C /* TouristCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAAF2AACDE2700D5A00C /* TouristCell.swift */; };
+		CED4EAB22AACF5BC00D5A00C /* AddTouristCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAB12AACF5BC00D5A00C /* AddTouristCell.swift */; };
+		CED4EAB42AADD7EA00D5A00C /* CorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAB32AADD7EA00D5A00C /* CorouselView.swift */; };
+		CED4EAB62AADDB0100D5A00C /* CorouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAB52AADDB0100D5A00C /* CorouselViewCell.swift */; };
+		CED4EAB82AADEB6600D5A00C /* CorouselPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EAB72AADEB6600D5A00C /* CorouselPageControl.swift */; };
+		CED4EABB2AAE190D00D5A00C /* SuccessOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EABA2AAE190D00D5A00C /* SuccessOrderVC.swift */; };
+		CED4EABD2AAE230900D5A00C /* ButtonTouristCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EABC2AAE230900D5A00C /* ButtonTouristCell.swift */; };
+		CED4EABF2AAE250B00D5A00C /* SuccessVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4EABE2AAE250B00D5A00C /* SuccessVCPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +67,17 @@
 		CED4EAA32AAB392A00D5A00C /* ReserveVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveVCPresenter.swift; sourceTree = "<group>"; };
 		CED4EAA52AAB8BD400D5A00C /* OfferInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInfoCell.swift; sourceTree = "<group>"; };
 		CED4EAA72AAB957A00D5A00C /* BuyerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInfoCell.swift; sourceTree = "<group>"; };
+		CED4EAA92AAC759E00D5A00C /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		CED4EAAB2AACBE1400D5A00C /* TotalPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPriceCell.swift; sourceTree = "<group>"; };
+		CED4EAAD2AACC69300D5A00C /* StyledTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextFieldView.swift; sourceTree = "<group>"; };
+		CED4EAAF2AACDE2700D5A00C /* TouristCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristCell.swift; sourceTree = "<group>"; };
+		CED4EAB12AACF5BC00D5A00C /* AddTouristCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTouristCell.swift; sourceTree = "<group>"; };
+		CED4EAB32AADD7EA00D5A00C /* CorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorouselView.swift; sourceTree = "<group>"; };
+		CED4EAB52AADDB0100D5A00C /* CorouselViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorouselViewCell.swift; sourceTree = "<group>"; };
+		CED4EAB72AADEB6600D5A00C /* CorouselPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorouselPageControl.swift; sourceTree = "<group>"; };
+		CED4EABA2AAE190D00D5A00C /* SuccessOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderVC.swift; sourceTree = "<group>"; };
+		CED4EABC2AAE230900D5A00C /* ButtonTouristCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTouristCell.swift; sourceTree = "<group>"; };
+		CED4EABE2AAE250B00D5A00C /* SuccessVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVCPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +115,7 @@
 				CED4EA802AA6FD7B00D5A00C /* Hotel */,
 				CED4EA942AA9197B00D5A00C /* Room */,
 				CED4EAA02AAB32F100D5A00C /* Reserve */,
+				CED4EAB92AAE15BE00D5A00C /* FinalScreen */,
 				CED4EA6C2AA60BF500D5A00C /* AppDelegate.swift */,
 				CED4EA6E2AA60BF500D5A00C /* SceneDelegate.swift */,
 				CED4EA752AA60BF800D5A00C /* Assets.xcassets */,
@@ -136,6 +159,9 @@
 		CED4EA9B2AAB1F6300D5A00C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CED4EAB32AADD7EA00D5A00C /* CorouselView.swift */,
+				CED4EAB52AADDB0100D5A00C /* CorouselViewCell.swift */,
+				CED4EAB72AADEB6600D5A00C /* CorouselPageControl.swift */,
 				CED4EA922AA8801400D5A00C /* SettingsView.swift */,
 				CED4EA902AA87FC300D5A00C /* PeculiaritiesView.swift */,
 				CED4EA9C2AAB1F9D00D5A00C /* ButtonView.swift */,
@@ -149,10 +175,25 @@
 			children = (
 				CED4EAA12AAB336600D5A00C /* ReserveVC.swift */,
 				CED4EAA32AAB392A00D5A00C /* ReserveVCPresenter.swift */,
+				CED4EAA92AAC759E00D5A00C /* AboutCell.swift */,
 				CED4EAA52AAB8BD400D5A00C /* OfferInfoCell.swift */,
 				CED4EAA72AAB957A00D5A00C /* BuyerInfoCell.swift */,
+				CED4EAAD2AACC69300D5A00C /* StyledTextFieldView.swift */,
+				CED4EAAB2AACBE1400D5A00C /* TotalPriceCell.swift */,
+				CED4EAAF2AACDE2700D5A00C /* TouristCell.swift */,
+				CED4EAB12AACF5BC00D5A00C /* AddTouristCell.swift */,
+				CED4EABC2AAE230900D5A00C /* ButtonTouristCell.swift */,
 			);
 			path = Reserve;
+			sourceTree = "<group>";
+		};
+		CED4EAB92AAE15BE00D5A00C /* FinalScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CED4EABA2AAE190D00D5A00C /* SuccessOrderVC.swift */,
+				CED4EABE2AAE250B00D5A00C /* SuccessVCPresenter.swift */,
+			);
+			path = FinalScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,20 +272,31 @@
 				CED4EA9D2AAB1F9D00D5A00C /* ButtonView.swift in Sources */,
 				CED4EA962AA91BBB00D5A00C /* RoomVC.swift in Sources */,
 				CED4EA8B2AA7085700D5A00C /* DownloadImage.swift in Sources */,
+				CED4EAB82AADEB6600D5A00C /* CorouselPageControl.swift in Sources */,
+				CED4EAAE2AACC69300D5A00C /* StyledTextFieldView.swift in Sources */,
 				CED4EAA62AAB8BD400D5A00C /* OfferInfoCell.swift in Sources */,
 				CED4EA6D2AA60BF500D5A00C /* AppDelegate.swift in Sources */,
+				CED4EABD2AAE230900D5A00C /* ButtonTouristCell.swift in Sources */,
+				CED4EABB2AAE190D00D5A00C /* SuccessOrderVC.swift in Sources */,
 				CED4EA842AA6FEF000D5A00C /* DataHotelCell.swift in Sources */,
 				CED4EA9A2AA91D8C00D5A00C /* RoomVCPresenter.swift in Sources */,
+				CED4EAB22AACF5BC00D5A00C /* AddTouristCell.swift in Sources */,
+				CED4EAB42AADD7EA00D5A00C /* CorouselView.swift in Sources */,
 				CED4EA6F2AA60BF500D5A00C /* SceneDelegate.swift in Sources */,
+				CED4EABF2AAE250B00D5A00C /* SuccessVCPresenter.swift in Sources */,
 				CED4EAA42AAB392A00D5A00C /* ReserveVCPresenter.swift in Sources */,
 				CED4EA892AA7044C00D5A00C /* NetworkServices.swift in Sources */,
 				CED4EAA22AAB336600D5A00C /* ReserveVC.swift in Sources */,
 				CED4EA8D2AA714CE00D5A00C /* HotelVCPresenter.swift in Sources */,
 				CED4EA822AA6FEAC00D5A00C /* DetailHotelCell.swift in Sources */,
+				CED4EAAC2AACBE1400D5A00C /* TotalPriceCell.swift in Sources */,
 				CED4EA912AA87FC300D5A00C /* PeculiaritiesView.swift in Sources */,
 				CED4EAA82AAB957A00D5A00C /* BuyerInfoCell.swift in Sources */,
 				CED4EA862AA6FF2F00D5A00C /* ButtonCell.swift in Sources */,
 				CED4EA932AA8801400D5A00C /* SettingsView.swift in Sources */,
+				CED4EAB62AADDB0100D5A00C /* CorouselViewCell.swift in Sources */,
+				CED4EAB02AACDE2700D5A00C /* TouristCell.swift in Sources */,
+				CED4EAAA2AAC759E00D5A00C /* AboutCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
